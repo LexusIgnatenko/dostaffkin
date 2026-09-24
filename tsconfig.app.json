@@ -3,7 +3,12 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/app",
+    // Явно указываем, где лежат исходные файлы
+    "rootDir": "./src", 
+    
+    // Указываем, куда складывать скомпилированный код (например, папка dist)
+    "outDir": "./dist",
+
     "types": []
   },
   "include": [
