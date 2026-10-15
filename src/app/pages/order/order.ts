@@ -6,7 +6,6 @@ import { UpperCasePipe } from '@angular/common';
 import { DeliveryApi } from '../../services/delivery-api';
 import { ToastrService } from 'ngx-toastr';
 
-
 declare var ymaps: any;
 
 @Component({
