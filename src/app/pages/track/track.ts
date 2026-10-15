@@ -14,6 +14,7 @@ export class Track {
   trackNumber = '';
   trackResult: any = signal(null);
 
+
   toastr=inject(ToastrService);
 
   constructor(private deliveryApi: DeliveryApi) {}
@@ -38,6 +39,7 @@ export class Track {
         this.toastr.error(response.error);
         return;
       }
+      
       this.toastr.success('Информация успешно получена!');
       this.trackResult.set(response);
     });
