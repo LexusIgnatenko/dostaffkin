@@ -16,7 +16,7 @@ export class Track {
 
   toastr = inject(ToastrService);
 
-  constructor(private deliveryApi: DeliveryApi) { }
+  constructor(private deliveryApi: DeliveryApi) {}
 
   trackShipment(): void {
     const rawValue = this.trackNumber.trim();
@@ -38,6 +38,7 @@ export class Track {
         this.toastr.error(response.error);
         return;
       }
+            
       this.toastr.success('Информация успешно получена!');
       this.trackResult.set(response);
     });
